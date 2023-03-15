@@ -1,6 +1,6 @@
 package com.projeto.atribuicaoReferencia;
 
-public class Main {
+public class MainAtribuicao {
     public static void main(String[] args) {
 
         /** Exemplo de atribuição, cópia de valores em variáveis do tipo primitivo.
