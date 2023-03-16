@@ -1,7 +1,7 @@
 package com.projeto.fila;
 
-public class Fila {
-    private NoFila referenciaNoEntrada; //referencia de entrada na fila;
+public class Fila<T> { //refatoracao classe Fila utilizando generics
+    private NoFila<T> referenciaNoEntrada; //referencia de entrada na fila;
 
     //construtor
     public Fila() {
@@ -16,14 +16,18 @@ public class Fila {
             return false;
     }
 
-    /**Metodo enqueue (enfileirar)*/
-    public  void enqueue(NoFila novoNo){
+    /**Metodo enqueue (enfileirar) atualizado*/
+    public  void enqueue(T novoConteudo){
+        NoFila novoNo = new NoFila(novoConteudo);
         novoNo.setReferenciaNoFrente(referenciaNoEntrada);
         this.referenciaNoEntrada = novoNo;
+
     }
+    /**Metodo enqueue (enfileirar) recebendo um No*/
+
 
     /**retorna o primeiro No da fila*/
-    public NoFila firts(){
+    public T firts(){
         if (this.isEmpty() == false){ //se a fila nao esta vazia
             NoFila primeiroNo = referenciaNoEntrada;
             while(true){//vou percorrer até o primeiro No
@@ -33,13 +37,14 @@ public class Fila {
                     break;
                 }
             }
+            return (T) primeiroNo.getConteudo(); //fazendo um casting para generics
         }
         return  null;
 
     }//fim metodo first
 
     /**Metodo desenfileirar retira primeiro No da fila e retorna-o*/
-    public NoFila dequeue(){
+    public T dequeue(){
         if (this.isEmpty() == false){//se a fila nao esta vazia
             NoFila primeiroNo = referenciaNoEntrada;
             NoFila noAuxiliar = referenciaNoEntrada;
@@ -53,7 +58,7 @@ public class Fila {
                     break;
                 }
             }
-            return primeiroNo;
+            return (T) primeiroNo.getConteudo(); //fazendo casting para generics
         }
         return  null;
 

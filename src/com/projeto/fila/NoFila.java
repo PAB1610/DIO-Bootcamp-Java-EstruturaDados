@@ -1,12 +1,12 @@
 package com.projeto.fila;
 
-public class NoFila {
-    private Object conteudo; //objeto que engloba todos os objetos do java, todos são herdados deste
-    private NoFila referenciaNoFrente = null;
+public class NoFila<T> {//refatoracao classe NO utilizando generics
+    private T conteudo; //objeto que engloba todos os objetos do java, todos são herdados deste
+    private NoFila<T> referenciaNoFrente = null;
 
     /*contrutor*/
 
-    public NoFila(Object conteudo) {
+    public NoFila(T conteudo) {
         this.conteudo = conteudo;
     }
 
@@ -19,7 +19,7 @@ public class NoFila {
         return conteudo;
     }
 
-    public void setConteudo(Object objeto) {
+    public void setConteudo(T objeto) {
         this.conteudo = objeto;
     }
 
