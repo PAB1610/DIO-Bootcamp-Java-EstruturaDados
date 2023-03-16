@@ -1,13 +1,13 @@
 package com.projeto.fila;
 
 public class NoFila {
-    private Object object; //objeto que engloba todos os objetos do java, todos são herdados deste
-    private NoFila referenciaNoFrente;
+    private Object conteudo; //objeto que engloba todos os objetos do java, todos são herdados deste
+    private NoFila referenciaNoFrente = null;
 
     /*contrutor*/
-    public NoFila(Object object) {
-        referenciaNoFrente = null;
-        this.object = object;
+
+    public NoFila(Object conteudo) {
+        this.conteudo = conteudo;
     }
 
     //construtor vazio
@@ -15,12 +15,12 @@ public class NoFila {
     public NoFila() {
     }
 
-    public Object getObject() {
-        return object;
+    public Object getConteudo() {
+        return conteudo;
     }
 
-    public void setObject(Object object) {
-        this.object = object;
+    public void setConteudo(Object objeto) {
+        this.conteudo = objeto;
     }
 
     public NoFila getReferenciaNoFrente() {
@@ -34,7 +34,7 @@ public class NoFila {
     @Override
     public String toString() {
         return "NoFila{" +
-                "object=" + object +
+                "Conteudo=" + conteudo +
                 '}';
     }
 }
