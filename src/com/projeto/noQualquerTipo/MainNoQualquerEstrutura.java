@@ -39,19 +39,15 @@ public class MainNoQualquerEstrutura {
         /*Com a utilização de NO de qualquer tipo, eu declaro o tipo de NO
          * na criação do objeto dentro da classe MAIN. Neste caso criamos um
          * nó de String na hora da declaração do objeto na classe MAIN*/
-        NoQualquerEstrutura<String> no1 = new NoQualquerEstrutura<>
-                ("Conteudo Qualquer no1: ");
+        NoQualquerEstrutura<String> no1 = new NoQualquerEstrutura<> ("Conteudo Qualquer no1: ");
 
-        NoQualquerEstrutura<String> no2 = new NoQualquerEstrutura<>
-                ("Conteudo Qualquer no2: ");
+        NoQualquerEstrutura<String> no2 = new NoQualquerEstrutura<> ("Conteudo Qualquer no2: ");
         no1.setProximoNo(no2);
 
-        NoQualquerEstrutura<String> no3 = new  NoQualquerEstrutura<>
-                ("Conteudo Qualquer no3: ");
+        NoQualquerEstrutura<String> no3 = new  NoQualquerEstrutura<> ("Conteudo Qualquer no3: ");
         no2.setProximoNo(no3);
 
-        NoQualquerEstrutura<String> no4 = new  NoQualquerEstrutura<>
-                ("Conteudo Qualquer no4: ");
+        NoQualquerEstrutura<String> no4 = new  NoQualquerEstrutura<> ("Conteudo Qualquer no4: ");
         no3.setProximoNo(no4);
 
         System.out.println(no1);
