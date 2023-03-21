@@ -1,11 +1,11 @@
-package com.projeto.equals_hashCode;
+package com.estruturasUtilizacao.arraylist;
 
 import java.util.Objects;
 
-public class Carro {
+public class CarroArrayL {
     String marca;
 
-    public Carro(String marca) {
+    public CarroArrayL(String marca) {
         this.marca = marca;
     }
 
@@ -21,7 +21,7 @@ public class Carro {
     public boolean equals(Object o) {
         if (this == o) return true; //se a referencia de memoria dos dois objetos são iguais
         if (o == null || getClass() != o.getClass()) return false; //se as classes são diferentes
-        Carro carro = (Carro) o;
+        CarroArrayL carro = (CarroArrayL) o;
         return Objects.equals(marca, carro.marca);
 
     }
@@ -30,5 +30,12 @@ public class Carro {
     @Override
     public int hashCode() {
         return Objects.hash(marca);
+    }
+
+    @Override
+    public String toString() {
+        String str= "";
+        str+= this.marca + " ";
+        return str;
     }
 }
